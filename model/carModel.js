@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+//manufacturer
 const manufacturerSchema = mongoose.Schema(
   {
     manufacturerName: {
@@ -20,7 +20,7 @@ const manufacturerSchema = mongoose.Schema(
   }
 );
 const Manufacturer = mongoose.model("Manufacturer", manufacturerSchema);
-
+//brand
 const brandSchema = mongoose.Schema(
   {
     brandName: {
@@ -57,7 +57,7 @@ const Brand = mongoose.model("Brand", brandSchema);
 // });
 
 // const Option = mongoose.model("Option", optionSchema);
-
+//model
 const modelSchema = mongoose.Schema(
   {
     modelName: {
@@ -83,7 +83,7 @@ const modelSchema = mongoose.Schema(
   }
 );
 const Model = mongoose.model("Model", modelSchema);
-
+//dealer
 const dealerSchema = mongoose.Schema(
   {
     image: {
@@ -107,7 +107,7 @@ const dealerSchema = mongoose.Schema(
   }
 );
 const Dealer = mongoose.model("Dealer", dealerSchema);
-
+//manufacturer vehicle
 const manufacturerVehicleSchema = mongoose.Schema(
   {
     manufacturer: {
@@ -138,7 +138,7 @@ const ManufacturerVehicle = mongoose.model(
   "ManufacturerVehicle",
   manufacturerVehicleSchema
 );
-
+//dealer vehicle
 const dealerVehicleSchema = mongoose.Schema(
   {
     vehicleModel: {
@@ -166,7 +166,7 @@ const dealerVehicleSchema = mongoose.Schema(
 );
 
 const DealerVehicle = mongoose.model("DealerVehicle", dealerVehicleSchema);
-
+//customer
 const customerSchema = mongoose.Schema(
   {
     customerName: {
@@ -191,7 +191,7 @@ const customerSchema = mongoose.Schema(
 );
 
 const Customer = mongoose.model("Customer", customerSchema);
-
+//sales
 const saleSchema = mongoose.Schema(
   {
     dealerVehicle: {
@@ -209,7 +209,7 @@ const saleSchema = mongoose.Schema(
 );
 
 const Sale = mongoose.model("Sale", saleSchema);
-
+//more image
 const MoreImageSchema = mongoose.Schema({
   vehicleModel: {
     type: mongoose.Schema.Types.ObjectId,
@@ -221,7 +221,7 @@ const MoreImageSchema = mongoose.Schema({
 });
 
 const MoreImage = mongoose.model("MoreImage", MoreImageSchema);
-
+//more info
 const MoreInfoSchema = mongoose.Schema({
   vehicleModel: {
     type: mongoose.Schema.Types.ObjectId,
