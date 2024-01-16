@@ -7,7 +7,6 @@ const router = express.Router();
 // post or create route
 router.post("/manufacturer", CarController.createManufacturer);
 router.post("/brand", CarController.createBrand);
-router.post("/option", CarController.createOption);
 router.post("/model", CarController.createModel);
 router.post("/manufacturerVehicle", CarController.createManufacturerVehicle);
 router.post("/dealer", CarController.createDealer);
@@ -35,7 +34,15 @@ router.get("/topBrandsBySales", CarController.getTopBrandsBySales);
 router.get("/sales-past-three-years", CarController.getSalesThreeYearsPast);
 router.get("/top-brand-sales", CarController.getTopBrandsBySalesTotalAmount);
 
+//try
+router.get(
+  "/get-dealer-vehicle-price-search",
+  CarController.getDealerVehicleByPrice
+);
+
 // update routes
 router.put("/update-manufacturer/:id", CarController.updateManufacturer);
 
 module.exports = router;
+
+
